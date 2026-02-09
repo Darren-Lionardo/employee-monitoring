@@ -1,3 +1,13 @@
+## Project Tech Stack
+
+- Backend
+  - Typescript
+  - NestJS
+  - MySQL
+- Frontend
+  - Typescript
+  - ReactJS
+
 ## Project Structure
 
 - Backend
