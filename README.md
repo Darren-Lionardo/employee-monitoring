@@ -72,6 +72,18 @@ $ cp .env.example .env
 $ npm run dev
 ```
 
+## Database Structure
+
+- dexa_auth -> Autentikasi dan manajemen role
+  - table: User
+  - project: backend/api
+- dexa_employee -> Data employee
+  - table: Employee
+  - project: backend/employee-service
+- dexa_attendance -> Data absensi employee
+  - table: Attendance
+  - project: backend/attendance-service
+
 ## Route Endpoints
 
 ### Authentication
