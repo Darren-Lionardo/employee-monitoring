@@ -23,7 +23,13 @@ const AttendancePage = () => {
   const [attendances, setAttendances] = useState<Attendance[]>([]);
 
   useEffect(() => {
-    if (user) fetchAttendances(user.id);
+    if (user) {
+      if (user.role !== "EMPLOYEE") {
+        navigate("/employees");
+      }
+
+      fetchAttendances(user.id);
+    }
   }, [user]);
 
   useEffect(() => {
@@ -38,12 +44,6 @@ const AttendancePage = () => {
         navigate("/login");
 
         return;
-      }
-
-      if (user) {
-        if (user.role !== "EMPLOYEE") {
-          navigate("/employees");
-        }
       }
     };
 

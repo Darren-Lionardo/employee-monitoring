@@ -123,6 +123,16 @@ const EmployeePage = () => {
   };
 
   useEffect(() => {
+    if (user) {
+      if (user.role !== "HRD") {
+        navigate("/attendance");
+      }
+
+      fetchEmployees();
+    }
+  }, [user]);
+
+  useEffect(() => {
     const run = async () => {
       await refreshUser();
 
@@ -131,14 +141,6 @@ const EmployeePage = () => {
 
         return;
       }
-
-      if (user && user.role !== "HRD") {
-        navigate("/attendance");
-
-        return;
-      }
-
-      await fetchEmployees();
     };
 
     run();
