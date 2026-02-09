@@ -3,7 +3,7 @@
 - Backend
   - Typescript
   - NestJS
-  - MySQL
+  - MySQL (Prisma)
 - Frontend
   - Typescript
   - ReactJS
